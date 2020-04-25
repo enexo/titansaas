@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Titan Clients</title>
+    <link rel="stylesheet" href="/css/main.css">
+<body>
+<form action="/client-entered" method="post">
+    <fieldset>
+        <legend>Please Enter a New Client</legend>
+
+        <label for="clientType">Type:</label>
+        <select name="type" id="clientType">
+            <option value="">--Please choose an option--</option>
+            <option value="inbound">Inbound</option>
+            <option value="outbound">Outbound</option>
+        </select>
+
+        <p>
+            <label for="com_name">Company Name:</label>
+            <input type="text" name="com_name" id="com_name">
+        </p>
+        <p>
+            <label for="fac_street">Facility Street:</label>
+            <input type="text" name="fac_street" id="fac_street">
+        </p>
+        <p>
+            <label for="fac_city">Facilty City:</label>
+            <input type="text" name="fac_city" id="fac_city">
+        </p>
+        <p>
+            <label for="fac_state">Facility State:</label>
+            <input type="text" name="fac_state" id="fac_state">
+        </p>
+        <p>
+            <label for="fac_zip">Facility Zip Code:</label>
+            <input type="text" name="fac_zip" id="fac_zip">
+        </p>
+        <p>
+            <label for="fac_phone">Facility Phone:</label>
+            <input type="text" name="fac_phone" id="fac_phone">
+        </p>
+        <p>
+            <label for="con_fname">Contact First Name:</label>
+            <input type="text" name="con_fname" id="con_fname">
+        </p>
+        <p>
+            <label for="con_lname">Contact Last Name:</label>
+            <input type="text" name="con_lname" id="con_lname">
+        </p>
+        <p>
+            <label for="con_email">Contact Email:</label>
+            <input type="text" name="con_email" id="con_email">
+        </p>
+        <p>
+            <label for="con_phone">Contact Phone:</label>
+            <input type="text" name="con_phone" id="con_phone">
+        </p>
+        <button class="" type="submit">Submit</button>
+    </fieldset>
+</form>
+</body>
+</html>

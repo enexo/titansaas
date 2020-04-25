@@ -13,7 +13,7 @@ const connection = mysql.createConnection({
 });
 
 // Initialize Express
-var app = express();
+const app = express();
 
 // Tell Express we want to use packages
 app.use(session({
@@ -28,6 +28,11 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname+"public")));
 app.set('view engine', 'ejs');
 app.set('views',path.join(__dirname,'views'));
+
+// Init Routers
+const router = require('./routes/clients');
+
+app.use(router);
 
 // Routes
 
