@@ -33,8 +33,9 @@ app.set('views',path.join(__dirname,'views'));
 
 
 // Display Login.html to client
-app.get('/login', function(request, response) {
-    response.sendFile(path.join(__dirname + '/login.html'));
+app.get('/login', function(req, res) {
+    return res.render('login');
+    //response.sendFile(path.join(__dirname + '/login.html'));  // don't think I need this any more.
 });
 
 // How to handle POST request
@@ -61,7 +62,8 @@ app.post('/auth', function(request, response) {
 // Handle GET Request
 app.get('/home', function(request, response) {
     if (request.session.loggedin) {
-        response.send('Welcome back, ' + request.session.username + '!');
+        return response.render('titan');
+        //response.send('Welcome back, ' + request.session.username + '!');
     } else {
         response.send('Please login to view this page!');
     }
@@ -71,7 +73,6 @@ app.get('/home', function(request, response) {
 // Nate's Products Routes
 app.get('/products', (req, res) => {
     return res.render('products');
-    console.log(req, res)
 });
 
 app.post('/products-entered', (req, res) => {
@@ -80,7 +81,7 @@ app.post('/products-entered', (req, res) => {
     connection.query(sql,(err, result) => {
         if (err) throw err;
         console.log(result);
-        res.send('DB Added, Bitch!')
+        res.render('products-entered')
     });
 });
 
