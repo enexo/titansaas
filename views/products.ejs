@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Products</title>
+    <link rel="stylesheet" href="/css/main.css">
+<body>
+<form action="/products-entered" method="post">
+    <fieldset>
+        <legend>Please Enter a Product</legend>
+
+        <label for="pet-select">Type:</label>
+        <select name="pets" id="pet-select">
+            <option value="">--Please choose an option--</option>
+            <option value="Desktop">Desktop</option>
+            <option value="Laptop">Laptop</option>
+            <option value="Monitor">Monitor</option>
+            <option value="Hard Drive">Hard Drive</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <p>
+            <label for="manufacturer">Manufacturer:</label>
+            <input type="text" name="manufacturer" id="manufacturer">
+        </p>
+        <p>
+            <label for="model">Model:</label>
+            <input type="text" name="model" id="model">
+        </p>
+        <p>
+            <label for="serial">Serial #:</label>
+            <input type="text" name="serial" id="serial">
+        </p>
+        <p>
+            <label for="size">Size:</label>
+            <input type="text" name="size" id="size">
+        </p>
+        <p>
+            <label for="proc_model">Processor Model:</label>
+            <input type="text" name="proc_model" id="proc_model">
+        </p>
+        <p>
+            <label for="proc_speed">Processor Speed:</label>
+            <input type="text" name="proc_speed" id="proc_speed">
+        </p>
+        <p>
+            <label for="ram">RAM:</label>
+            <input type="text" name="ram" id="ram">
+        </p>
+        <p>
+            <label for="hdd">Hard Drive:</label>
+            <input type="text" name="hdd" id="hdd">
+        </p>
+        <p>
+            <label for="hdd_type">Hard Drive Type:</label>
+            <input type="text" name="hdd_type" id="hdd_type">
+        </p>
+        <p>
+            <label for="optical">Optical:</label>
+            <input type="text" name="optical" id="optical">
+        </p>
+        <p>
+            <label for="coa">COA:</label>
+            <input type="text" name="coa" id="coa">
+        </p>
+        <p>
+            <label for="battery">Battery:</label>
+            <input type="text" name="battery" id="battery">
+        </p>
+        <p>
+            <label for="webcam">Webcam:</label>
+            <input type="text" name="webcam" id="webcam">
+        </p>
+        <p>
+            <label for="short_description">Product Description:</label>
+            <input type="text" name="short_description" id="short_description">
+        </p>
+        <p>
+            <label for="comment">Comments:</label>
+            <input type="text" name="comment" id="comment">
+        </p>
+        <p>
+            <label for="grade">Grade:</label>
+            <input type="text" name="grade" id="grade">
+        </p>
+        <button class="" type="submit">Submit</button>
+    </fieldset>
+</form>
+</body>
+</html>

@@ -1,11 +1,11 @@
 //packages
-var mysql = require('mysql');
-var express = require('express');
-var session = require('express-session');
-var bodyParser = require('body-parser');
-var path = require('path');
+const mysql = require('mysql');
+const express = require('express');
+const session = require('express-session');
+const bodyParser = require('body-parser');
+const path = require('path');
 
-var connection = mysql.createConnection({
+const connection = mysql.createConnection({
     host     : 'localhost',
     user     : 'root',
     password : 'root43026',
@@ -24,6 +24,14 @@ app.use(session({
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 
+// Imported from products
+app.use(express.static(path.join(__dirname+"public")));
+app.set('view engine', 'ejs');
+app.set('views',path.join(__dirname,'views'));
+
+// Routes
+
+
 // Display Login.html to client
 app.get('/login', function(request, response) {
     response.sendFile(path.join(__dirname + '/login.html'));
@@ -31,8 +39,8 @@ app.get('/login', function(request, response) {
 
 // How to handle POST request
 app.post('/auth', function(request, response) {
-    var username = request.body.username;
-    var password = request.body.password;
+    const username = request.body.username;
+    const password = request.body.password;
     if (username && password) {
         connection.query('SELECT * FROM users WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
             if (results.length > 0) {
@@ -59,6 +67,29 @@ app.get('/home', function(request, response) {
     }
     response.end();
 });
+
+// Nate's Products Routes
+app.get('/products', (req, res) => {
+    return res.render('products');
+    console.log(req, res)
+});
+
+app.post('/products-entered', (req, res) => {
+    let sql = "INSERT INTO products (manufacturer, type, grade, model, short_description, size, serial_number, comment, proc_model, proc_speed, ram, hdd_size, hdd_type, webcam, optical, coa, battery)" +
+        "VALUES ('"+req.body.manufacturer+"', '"+req.body.pets+"', '"+req.body.grade+"', '"+req.body.model+"', '"+req.body.short_description+"', '"+req.body.size+"', '"+req.body.serial+"', '"+req.body.comment+"', '"+req.body.proc_model+"', '"+req.body.proc_speed+"', '"+req.body.ram+"', '"+req.body.hdd+"', '"+req.body.hdd_type+"', '"+req.body.webcam+"', '"+req.body.optical+"', '"+req.body.coa+"', '"+req.body.battery+"')";
+    connection.query(sql,(err, result) => {
+        if (err) throw err;
+        console.log(result);
+        res.send('DB Added, Bitch!')
+    });
+});
+
+
+
+
+
+
+
 
 app.listen(3000);
 
