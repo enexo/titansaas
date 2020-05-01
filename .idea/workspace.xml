@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1edd542-275f-43df-b5de-6ce58f459e4b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/routes/clients.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/client-entered.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/client-entry.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/includes/footer.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/includes/header.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/client-entered.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/client-entered.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/client-entry.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/client-entry.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/products-entered.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/products-entered.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/products.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/products.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/titan.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/titan.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +25,7 @@
         <option value="package.json" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -38,6 +45,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -60,6 +68,9 @@
       <workItem from="1587804405098" duration="790000" />
       <workItem from="1587842031133" duration="1970000" />
       <workItem from="1587852471363" duration="2415000" />
+      <workItem from="1587998411343" duration="1991000" />
+      <workItem from="1588103382233" duration="845000" />
+      <workItem from="1588336535814" duration="5711000" />
     </task>
     <servers />
   </component>
