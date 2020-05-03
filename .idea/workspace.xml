@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1edd542-275f-43df-b5de-6ce58f459e4b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/productsAPI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/productsAPI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/titan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/titan.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/kroger.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/kroger.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +69,9 @@
       <workItem from="1587998411343" duration="1991000" />
       <workItem from="1588103382233" duration="845000" />
       <workItem from="1588336535814" duration="6743000" />
-      <workItem from="1588416812645" duration="7784000" />
+      <workItem from="1588416812645" duration="14645000" />
+      <workItem from="1588440289869" duration="6313000" />
+      <workItem from="1588452010691" duration="9717000" />
     </task>
     <servers />
   </component>
@@ -76,6 +84,10 @@
     </state>
     <state x="-1193" y="175" key="#com.intellij.fileTypes.FileTypeChooser/-1920.-163.1920.1057/0.23.1920.1057@-1920.-163.1920.1057" timestamp="1588359491989" />
     <state x="727" y="361" key="#com.intellij.fileTypes.FileTypeChooser/-1920.-163.1920.1057/0.23.1920.1057@0.23.1920.1057" timestamp="1587764118295" />
+    <state x="-1222" y="119" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588473454832">
+      <screen x="-1920" y="-163" width="1920" height="1057" />
+    </state>
+    <state x="-1222" y="119" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.-163.1920.1057/0.23.1920.1057@-1920.-163.1920.1057" timestamp="1588473454832" />
     <state width="1899" height="290" key="GridCell.Tab.0.bottom" timestamp="1587852706524">
       <screen x="-1920" y="-163" width="1920" height="1057" />
     </state>
