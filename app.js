@@ -156,14 +156,14 @@ app.get('/kroger/:id', (req, res, next) => {
 
 
 app.get('/dashboardapi', (req, res, next) => {
-    let krogerManGroupBy = 'SELECT manufacturer, COUNT(manufacturer) AS CountByMan FROM products WHERE client LIKE \'k%\' GROUP BY manufacturer';
-    let query = pool.query(krogerManGroupBy, (err, result) => {
+    let sql = 'SELECT manufacturer, COUNT(manufacturer) AS CountByMan FROM products WHERE client LIKE \'k%\' GROUP BY manufacturer;' +
+        'SELECT proc_model, COUNT(proc_model) AS ProcModel FROM products WHERE client LIKE \'k%\' GROUP BY proc_model;' +
+        'SELECT type, COUNT(type) AS TYPE FROM products WHERE client LIKE \'k%\' GROUP BY type;';
+    let query = pool.query(sql, (err, result) => {
         if (err) throw err;
         console.log(result);
         res.writeHead(200, {'Content-Type': 'application/json'});
         res.end(JSON.stringify(result));
-
-        // Should result in 912
     });
 });
 

@@ -4,6 +4,7 @@
     <list default="true" id="c1edd542-275f-43df-b5de-6ce58f459e4b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/includes/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/includes/header.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/kroger.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/kroger.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +70,7 @@
       <workItem from="1588416812645" duration="14645000" />
       <workItem from="1588440289869" duration="6313000" />
       <workItem from="1588452010691" duration="9717000" />
-      <workItem from="1588714118685" duration="379000" />
+      <workItem from="1588714118685" duration="3448000" />
     </task>
     <servers />
   </component>
@@ -102,6 +103,10 @@
       <screen x="-1920" y="-163" width="1920" height="1057" />
     </state>
     <state width="1899" height="290" key="GridCell.Tab.0.right/-1920.-163.1920.1057/0.23.1920.1057@-1920.-163.1920.1057" timestamp="1587852706522" />
+    <state x="-1155" y="289" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588714746559">
+      <screen x="-1920" y="-163" width="1920" height="1057" />
+    </state>
+    <state x="-1155" y="289" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.-163.1920.1057/0.23.1920.1057@-1920.-163.1920.1057" timestamp="1588714746559" />
     <state x="-1295" y="72" width="670" height="676" key="search.everywhere.popup" timestamp="1588422102052">
       <screen x="-1920" y="-163" width="1920" height="1057" />
     </state>

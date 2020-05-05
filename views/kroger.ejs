@@ -1,7 +1,11 @@
 <%- include('includes/header.ejs') %>
 <h1>Kroger Dashboard</h1>
 
-<div id="dataDump"></div>
+<div class="row">
+    <div class="col-sm">
+        <table id="CountByMan"></table>
+    </div>
+</div>
 
 
 <script>
@@ -9,19 +13,25 @@
 
     const ourRequest = new XMLHttpRequest();
     ourRequest.open('GET', 'http://localhost:3000/dashboardapi');
+
+
     ourRequest.onload = function () {
         const ourData = JSON.parse(ourRequest.responseText);
-        console.log(ourData[0].manufacturer);
-        console.log(ourData[0].CountByMan);
-        renderHTML(ourData);
+        console.log(ourData[0][0].manufacturer);
+        console.log(ourData[0][0].CountByMan);
+        //renderHTML(ourData);
     };
+
+
+
+
+
+
+
+
+
+
+
     ourRequest.send();
-
-function renderHTML(data) {
-    let htmlString = "this is a test"
-    dataDump.insertAdjacentHTML('beforeend', htmlString);
-};
-
-
 </script>
 <%- include('includes/footer.ejs') %>
