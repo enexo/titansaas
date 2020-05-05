@@ -8,10 +8,11 @@
     let dataDump = document.getElementById("dataDump");
 
     const ourRequest = new XMLHttpRequest();
-    ourRequest.open('GET', 'http://localhost:3000/test');
+    ourRequest.open('GET', 'http://localhost:3000/dashboardapi');
     ourRequest.onload = function () {
         const ourData = JSON.parse(ourRequest.responseText);
-        console.log(ourData[0]);
+        console.log(ourData[0].manufacturer);
+        console.log(ourData[0].CountByMan);
         renderHTML(ourData);
     };
     ourRequest.send();

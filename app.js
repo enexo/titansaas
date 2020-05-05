@@ -155,8 +155,8 @@ app.get('/kroger/:id', (req, res, next) => {
 // });
 
 
-app.get('/test', (req, res, next) => {
-    let krogerManGroupBy = 'SELECT manufacturer, COUNT(manufacturer) FROM products WHERE client LIKE \'k%\' GROUP BY manufacturer';
+app.get('/dashboardapi', (req, res, next) => {
+    let krogerManGroupBy = 'SELECT manufacturer, COUNT(manufacturer) AS CountByMan FROM products WHERE client LIKE \'k%\' GROUP BY manufacturer';
     let query = pool.query(krogerManGroupBy, (err, result) => {
         if (err) throw err;
         console.log(result);
@@ -173,10 +173,7 @@ app.get('/test', (req, res, next) => {
 
 // API's need to be predictable.  Every API request is handled separately.
 
-// calls the route into the application.
-const productAPIRoutes = require('./routes/productsAPI');
-// calls the route into use with a precurser of /products in the url
-app.use('/products', productAPIRoutes);
+
 
 // Getting rid of CORS console.log err.  * allows you to lock down domains that can pull json data
 app.use((req, res, next) => {
