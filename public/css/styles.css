@@ -1,0 +1,100 @@
+/*
+Index.html CSS by Nathan Orlowski
+ */
+
+#header {
+    background-color: rgb(9, 72, 179);
+}
+a .nav-link{
+    color: white;
+}
+.btn-secondary {
+    color: white;
+    background-color: #ee5050;
+    border-color: #ee5050;
+}
+.btn-outline-white {
+    color: white;
+    border-color: white;
+}
+.heroText {
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 100px;
+    margin-bottom: 25px;
+}
+.lead {
+    color: white;
+    font-size: 1.25rem;
+}
+.btn-white {
+    background-color: white;
+    border-color: white;
+}
+.laptopPic {
+    margin-bottom: 100px;
+}
+.icon-shape-primary {
+    color: rgb(9, 72, 179);
+    background-color: rgba(9, 72, 179, .2);
+}
+.icon-shape {
+    width: 4.5rem;
+    height: 4.5rem;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.fourFeatures h1 {
+    margin: 50px 0px;
+}
+.fourFeatures h6 {
+    margin-bottom: 50px;
+}
+.dashboard {
+    margin: 100px 0px;
+}
+.discovery {
+    background-color: rgb(9, 72, 179) !important;
+}
+.text-primary {
+    color: rgb(9, 72, 179);
+}
+.card {
+    position: relative;
+}
+.shadow-soft {
+    box-shadow: 0 .75rem 1.5rem rgba(18,38,63,.03);
+}
+.rounded {
+    border-radius: .5rem;
+}
+.service {
+    color: white;
+}
+.fourServices {
+    padding: 100px 0px;
+}
+
+/*
+About.html CSS by Nathan Orlowski
+ */
+
+.card-body {
+    flex: 1 1 auto;
+    text-align: left !important;
+}
+.icon-success {
+    color: #05a677;
+}
+
+/*
+Pricing.html CSS by Nathan Orlowski
+ */
+
+.pricing-header {
+    max-width: 700px;
+}
+

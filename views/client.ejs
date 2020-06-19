@@ -1,0 +1,80 @@
+<%- include('includes/header.ejs') %>
+<h1>Example Client Dashboard</h1>
+
+<div class="row">
+    <div class="col-sm">
+        <table id="CountByMan"></table>
+    </div>
+    <div class="col-sm">
+
+    </div>
+</div>
+
+<div id="chart"></div>
+
+
+
+
+
+
+
+<script>
+    let dataDump = document.getElementById("dataDump");
+
+    const ourRequest = new XMLHttpRequest();
+    ourRequest.open('GET', 'http://localhost:3000/dashboardapi');
+
+
+    ourRequest.onload = function () {
+        const ourData = JSON.parse(ourRequest.responseText);
+        console.log(ourData[0][0].manufacturer);
+        console.log(ourData[0][0].CountByMan);
+        //renderHTML(ourData);
+
+        //this cycles through the api and grabs the manufacturer HP three times for some reason
+        // $.map(ourData, function (post, i) {
+        //     $('#result').append('<td>'+ ourData[0][0].manufacturer + '</td>','<td>'+ ourData[0][0].CountByMan +'</td>');
+        // })
+        $('#CountByMan').append('<tr><th>Units by Manufacturer</th></tr><tr><th>Manufacturer</th><th>Qty</th></tr>','<tr><td>'+ ourData[0][0].manufacturer +'</td><td>'+ ourData[0][0].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][1].manufacturer +'</td><td>'+ ourData[0][1].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][2].manufacturer +'</td><td>'+ ourData[0][2].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][3].manufacturer +'</td><td>'+ ourData[0][3].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][4].manufacturer +'</td><td>'+ ourData[0][4].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][5].manufacturer +'</td><td>'+ ourData[0][5].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][6].manufacturer +'</td><td>'+ ourData[0][6].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][7].manufacturer +'</td><td>'+ ourData[0][7].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][8].manufacturer +'</td><td>'+ ourData[0][8].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][9].manufacturer +'</td><td>'+ ourData[0][9].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][10].manufacturer +'</td><td>'+ ourData[0][10].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][11].manufacturer +'</td><td>'+ ourData[0][11].CountByMan +'</td></tr>');
+
+
+    };
+
+    let ctx = document.getElementById()
+    
+
+    let pieChart = new Chart(CHART, {
+        type: 'pie',
+        data: {
+            labels: ['i5', 'i7', 'i3'],
+            datasets: [
+                {
+                    label: 'Points',
+                    backgroundColor: ['#f1c40f', '#e67e22', '#16a085', '#2980b9', 'black'],
+                    data: [67, 16, 14]
+                }
+            ]
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ourRequest.send();
+</script>
+<%- include('includes/footer.ejs') %>

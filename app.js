@@ -32,50 +32,24 @@ const router = require('./routes/clients');
 
 app.use(router);
 
-
-
 // Routes
 
-// Display Login.html to client
-app.get('/login', function(req, res) {
-    return res.render('login');
+// Home Page Route
+app.get('/', (req, res) => {
+    return res.render('home');
 });
 
-// This is the loggin on submit call.  Commented out because it is broken.  Come back to this.  5/2/20
-// app.post('/auth', function(request, response) {
-//     const username = request.body.username;
-//     const password = request.body.password;
-//     if (username && password) {
-//         pool.query('SELECT * FROM users WHERE username = ? AND password = ?', [username, password], function(error, results, fields) {
-//             if (results.length > 0) {
-//                 console.log('I am here');
-//                 request.session.loggedin = true;
-//                 request.session.username = username;
-//                 response.redirect('/home');
-//             } else {
-//                 response.send('Incorrect Username and/or Password!');
-//             }
-//             response.end();
-//         });
-//     } else {
-//         response.send('Please enter Username and Password!');
-//         response.end();
-//     }
-// });
+app.get('/about', (req, res) => {
+    return res.render('about');
+});
 
+app.get('/pricing', (req, res) => {
+    return res.render('pricing');
+});
 
-// home doesn't work as the loggin is down.  5/2/20
-// app.get('/home', function(request, response) {
-//     if (request.session.loggedin) {
-//         return response.render('titan');
-//     } else {
-//         response.send('Please login to view this page!');
-//     }
-//     response.end();
-// });
-
-// Products Routes
-// .get gets a resource from the server where post sends a resource to the server
+app.get('/demo', (req, res) => {
+    return res.render('titan');
+});
 
 app.get('/products', (req, res) => {
     return res.render('products');
@@ -93,39 +67,13 @@ app.post('/products-entered', (req, res)=> {
     });
 });
 
-// Home Page Route
-app.get('/', (req, res) => {
-    return res.render('titan');
+
+
+app.get('/client', (req, res, next) => {
+        res.render('client');
 });
 
-
-// Kroger Dashboard Route
-
-// SELECT array is as follows
-// 0. Count of all kroger products  1514
-// 1. Count by Manufacturer
-
-app.get('/kroger', (req, res, next) => {
-
-    // let sql = 'SELECT COUNT(client) FROM products WHERE client LIKE \'k%\';' +
-    //     'SELECT manufacturer, COUNT(manufacturer) FROM products WHERE client LIKE \'k%\' GROUP BY manufacturer;' +
-    //     'SELECT manufacturer, COUNT(manufacturer) FROM products WHERE client LIKE \'k%\' GROUP BY manufacturer';
-    // let query = pool.query(sql, [3, 2, 1], function(error, results, fields) {
-    //     if (error) {
-    //         throw error;
-    //     }
-    //     const myObj = res.JSON();
-    //     console.log(results[0]);
-    //     console.log(results[1]);
-    //     console.log(results[2]);
-    //     res.end(JSON.stringify(myObj));
-    //     //res.send(results);
-        res.render('Kroger');
-        // Should result in 912
-   // });
-});
-
-app.get('/kroger/:id', (req, res, next) => {
+app.get('/client/:id', (req, res, next) => {
     let sql = `SELECT * FROM products WHERE client LIKE \'k%\' AND id = ${req.params.id}`;
     let query = pool.query(sql, (err, result) => {
         if (err) throw err;
@@ -133,31 +81,9 @@ app.get('/kroger/:id', (req, res, next) => {
         res.send(result);
     });
 });
-
-// app.get('/krogers/counts', (req, res, next) => {
-//     let krogerCounts = 'SELECT COUNT(client) FROM products WHERE client LIKE \'k%\'';
-//     let query = pool.query(krogerCounts, (err, result) => {
-//         if (err) throw err;
-//         console.log(result);
-//         res.send('Data Fetched');
-//         // Should result in 1514, PG = 1512
-//     });
-// });
-
-// app.get('/krogers/dell', (req, res, next) => {
-//     let krogerDell = 'SELECT COUNT(client) FROM products WHERE client LIKE \'k%\' AND manufacturer LIKE \'dell%\'';
-//     let query = pool.query(krogerDell, (err, result) => {
-//         if (err) throw err;
-//         console.log(result);
-//         res.send('Data Fetched');
-//         // Should result in 912
-//     });
-// });
-
-
 app.get('/dashboardapi', (req, res, next) => {
     let sql = 'SELECT manufacturer, COUNT(manufacturer) AS CountByMan FROM products WHERE client LIKE \'k%\' GROUP BY manufacturer;' +
-        'SELECT proc_model, COUNT(proc_model) AS ProcModel FROM products WHERE client LIKE \'k%\' GROUP BY proc_model;' +
+        'SELECT proc_model, COUNT(proc_model) AS ProcModel FROM products WHERE client="Kroger" AND type="Laptop" GROUP BY proc_model;' +
         'SELECT type, COUNT(type) AS TYPE FROM products WHERE client LIKE \'k%\' GROUP BY type;';
     let query = pool.query(sql, (err, result) => {
         if (err) throw err;
@@ -166,14 +92,6 @@ app.get('/dashboardapi', (req, res, next) => {
         res.end(JSON.stringify(result));
     });
 });
-
-
-
-
-
-// API's need to be predictable.  Every API request is handled separately.
-
-
 
 // Getting rid of CORS console.log err.  * allows you to lock down domains that can pull json data
 app.use((req, res, next) => {
