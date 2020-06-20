@@ -67,7 +67,9 @@ app.post('/products-entered', (req, res)=> {
     });
 });
 
-
+app.get('/client-entry', (req, res, next) => {
+    res.render('client-entry');
+});
 
 app.get('/client', (req, res, next) => {
         res.render('client');
