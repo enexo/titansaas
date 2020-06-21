@@ -1,80 +1,258 @@
 <%- include('includes/header.ejs') %>
-<h1>Example Client Dashboard</h1>
 
-<div class="row">
-    <div class="col-sm">
-        <table id="CountByMan"></table>
-    </div>
-    <div class="col-sm">
+
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+            <a class="nav-link" href="/">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>TitanSaaS</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Forms
+        </div>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link" href="/">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Home</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/pricing">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Pricing</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/products">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Product Entry</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/client-entry">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>New Clients</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/client">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Client Dashboard</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Addons Coming Soon
+        </div>
+
+        <!-- Divider -->
+<!--        <hr class="sidebar-divider d-none d-md-block">-->
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Sample Client Dashboard</h1>
+<!--                    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>-->
+                </div>
+
+                <!-- Content Row -->
+                <div class="row">
+
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Laptops</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Desktops</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Earnings (Monthly) Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Other Units</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-clipboard fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pending Requests Card Example -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-warning shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Total Units</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-calculator fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Row -->
+
+                <div class="row">
+                    <!-- Pie Chart 0 -->
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Dropdown -->
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <div class="chart-pie pt-4 pb-2">
+                                    <canvas id="myPieChart0"></canvas>
+                                </div>
+                                <div class="mt-4 text-center small">
+                                    <span class="mr-2">
+                                      <i class="fas fa-circle text-primary"></i> Direct
+                                    </span>
+                                                    <span class="mr-2">
+                                      <i class="fas fa-circle text-success"></i> Social
+                                    </span>
+                                                    <span class="mr-2">
+                                      <i class="fas fa-circle text-info"></i> Referral
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pie Chart 1 -->
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Dropdown -->
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <div class="chart-pie pt-4 pb-2">
+                                    <canvas id="myPieChart1"></canvas>
+                                </div>
+                                <div class="mt-4 text-center small">
+                                    <span class="mr-2">
+                                      <i class="fas fa-circle text-primary"></i> Direct
+                                    </span>
+                                    <span class="mr-2">
+                                      <i class="fas fa-circle text-success"></i> Social
+                                    </span>
+                                    <span class="mr-2">
+                                      <i class="fas fa-circle text-info"></i> Referral
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pie Chart 2 -->
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="card shadow mb-4">
+                            <!-- Card Header - Dropdown -->
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                            </div>
+                            <!-- Card Body -->
+                            <div class="card-body">
+                                <div class="chart-pie pt-4 pb-2">
+                                    <canvas id="myPieChart2"></canvas>
+                                </div>
+                                <div class="mt-4 text-center small">
+                                    <span class="mr-2">
+                                      <i class="fas fa-circle text-primary"></i> Direct
+                                    </span>
+                                    <span class="mr-2">
+                                      <i class="fas fa-circle text-success"></i> Social
+                                    </span>
+                                    <span class="mr-2">
+                                      <i class="fas fa-circle text-info"></i> Referral
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; TitanSaaS 2020</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
 
     </div>
+    <!-- End of Content Wrapper -->
+
 </div>
-
-<div id="chart"></div>
-
-
-
-
-
-
-
-<script>
-    let dataDump = document.getElementById("dataDump");
-
-    const ourRequest = new XMLHttpRequest();
-    ourRequest.open('GET', 'http://localhost:3000/dashboardapi');
-
-
-    ourRequest.onload = function () {
-        const ourData = JSON.parse(ourRequest.responseText);
-        console.log(ourData[0][0].manufacturer);
-        console.log(ourData[0][0].CountByMan);
-        //renderHTML(ourData);
-
-        //this cycles through the api and grabs the manufacturer HP three times for some reason
-        // $.map(ourData, function (post, i) {
-        //     $('#result').append('<td>'+ ourData[0][0].manufacturer + '</td>','<td>'+ ourData[0][0].CountByMan +'</td>');
-        // })
-        $('#CountByMan').append('<tr><th>Units by Manufacturer</th></tr><tr><th>Manufacturer</th><th>Qty</th></tr>','<tr><td>'+ ourData[0][0].manufacturer +'</td><td>'+ ourData[0][0].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][1].manufacturer +'</td><td>'+ ourData[0][1].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][2].manufacturer +'</td><td>'+ ourData[0][2].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][3].manufacturer +'</td><td>'+ ourData[0][3].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][4].manufacturer +'</td><td>'+ ourData[0][4].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][5].manufacturer +'</td><td>'+ ourData[0][5].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][6].manufacturer +'</td><td>'+ ourData[0][6].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][7].manufacturer +'</td><td>'+ ourData[0][7].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][8].manufacturer +'</td><td>'+ ourData[0][8].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][9].manufacturer +'</td><td>'+ ourData[0][9].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][10].manufacturer +'</td><td>'+ ourData[0][10].CountByMan +'</td></tr>','<tr><td>'+ ourData[0][11].manufacturer +'</td><td>'+ ourData[0][11].CountByMan +'</td></tr>');
-
-
-    };
-
-    let ctx = document.getElementById()
-    
-
-    let pieChart = new Chart(CHART, {
-        type: 'pie',
-        data: {
-            labels: ['i5', 'i7', 'i3'],
-            datasets: [
-                {
-                    label: 'Points',
-                    backgroundColor: ['#f1c40f', '#e67e22', '#16a085', '#2980b9', 'black'],
-                    data: [67, 16, 14]
-                }
-            ]
-        }
-    });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    ourRequest.send();
-</script>
+<!-- End of Page Wrapper -->
 <%- include('includes/footer.ejs') %>
