@@ -72,7 +72,13 @@ app.get('/client-entry', (req, res, next) => {
 });
 
 app.get('/client', (req, res, next) => {
-        res.render('client');
+    let sql = `select * from products where client LIKE 'k%'`;
+    let query = pool.query(sql, (err, result) => {
+        if (err) throw err;
+        res.render('client', {result: result});
+    });
+
+
 });
 
 app.get('/client/:id', (req, res, next) => {

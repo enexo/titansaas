@@ -102,4 +102,6 @@ Pricing.html CSS by Nathan Orlowski
     max-width: 700px;
     color: white;
 }
-
+.form-rounded {
+    border-radius: 1rem;
+}

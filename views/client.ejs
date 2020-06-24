@@ -1,6 +1,5 @@
 <%- include('includes/header.ejs') %>
 
-
 <!-- Page Wrapper -->
 <div id="wrapper">
 
@@ -235,6 +234,12 @@
                         </div>
                     </div>
                 </div>
+                <!-- Table Starts Here -->
+                <div>
+                    <table id="example" class="display" style="width:100%">
+
+                    </table>
+                </div>
             </div>
             <!-- /.container-fluid -->
         </div>
@@ -255,4 +260,42 @@
 
 </div>
 <!-- End of Page Wrapper -->
+<script>
+    $(document).ready(function() {
+
+        const results =<%-JSON.stringify(result) %>;
+
+        const newArray = [];
+
+        results.forEach(function(data) {
+            newArray.push(Object.values(data));
+        });
+
+        $('#example').DataTable( {
+            data: newArray,
+            columns: [
+                { title: "id" },
+                { title: "manuf." },
+                { title: "type" },
+                { title: "grade." },
+                { title: "model" },
+                { title: "description" },
+                { title: "size" },
+                { title: "serial#" },
+                { title: "comment" },
+                { title: "Processor" },
+                { title: "RAM" },
+                { title: "Speed" },
+                { title: "hdd_size" },
+                { title: "hdd_type" },
+                { title: "webcam" },
+                { title: "optical" },
+                { title: "coa" },
+                { title: "battery" },
+                { title: "client" }
+            ]
+        } );
+    } );
+</script>
+
 <%- include('includes/footer.ejs') %>
