@@ -7,9 +7,9 @@ var ctx = document.getElementById("myPieChart0");
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Direct", "Referral", "Social"],
+    labels: ["i3", "i5", "i7"],
     datasets: [{
-      data: [55, 30, 15],
+      data: [132, 616, 150],
       backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
       hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
@@ -40,9 +40,9 @@ var ctx = document.getElementById("myPieChart1");
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Direct", "Referral", "Social"],
+    labels: ["i3", "i5", "i7"],
     datasets: [{
-      data: [75, 10, 15],
+      data: [0, 0, 0],
       backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
       hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
@@ -73,9 +73,9 @@ var ctx = document.getElementById("myPieChart2");
 var myPieChart = new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ["Direct", "Referral", "Social"],
+    labels: ["Grade A 22 Inch", "Grade B 22 Inch"],
     datasets: [{
-      data: [30, 55, 15],
+      data: [454, 162],
       backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
       hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",

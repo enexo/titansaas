@@ -1,64 +1,164 @@
 <%- include('includes/header.ejs') %>
 
-<form action="/client-entered" method="post" class="clientForm">
+<!-- Page Wrapper -->
+<div id="wrapper">
 
-        <h1 class="clientLegend">Please Enter a New Client</h1>
-        <div class="row">
-            <div class="col-sm">
-        <label for="clientType">Type:</label>
-        <select name="type" id="clientType">
-            <option value="">--Please choose an option--</option>
-            <option value="inbound">Inbound</option>
-            <option value="outbound">Outbound</option>
-        </select>
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-        <p>
-            <label for="com_name">Company Name:</label>
-            <input type="text" name="com_name" id="com_name">
-        </p>
-        <p>
-            <label for="fac_street">Facility Street:</label>
-            <input type="text" name="fac_street" id="fac_street">
-        </p>
-        <p>
-            <label for="fac_city">Facilty City:</label>
-            <input type="text" name="fac_city" id="fac_city">
-        </p>
-        <p>
-            <label for="fac_state">Facility State:</label>
-            <input type="text" name="fac_state" id="fac_state">
-        </p>
-        <p>
-            <label for="fac_zip">Facility Zip Code:</label>
-            <input type="text" name="fac_zip" id="fac_zip">
-        </p>
-        <p>
-            <label for="fac_phone">Facility Phone:</label>
-            <input type="text" name="fac_phone" id="fac_phone">
-        </p>
-            </div>
-            <div class="col-sm">
-        <p>
-            <label for="con_fname">Contact First Name:</label>
-            <input type="text" name="con_fname" id="con_fname">
-        </p>
-        <p>
-            <label for="con_lname">Contact Last Name:</label>
-            <input type="text" name="con_lname" id="con_lname">
-        </p>
-        <p>
-            <label for="con_email">Contact Email:</label>
-            <input type="text" name="con_email" id="con_email">
-        </p>
-        <p>
-            <label for="con_phone">Contact Phone:</label>
-            <input type="text" name="con_phone" id="con_phone">
-        </p>
-            </div>
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+            <a class="nav-link" href="/">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>TitanSaaS</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Forms
         </div>
-    <div class="text-center clientButton"><button type="submit">Submit</button></div>
-</form>
-<style>
 
-</style>
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link" href="/">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Home</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/pricing">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Pricing</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/products">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Product Entry</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/client-entry">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>New Clients</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/client">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Client Dashboard</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Addons Coming Soon
+        </div>
+
+        <!-- Divider -->
+        <!--        <hr class="sidebar-divider d-none d-md-block">-->
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Welcome to TitanSaaS</h1>
+
+                </div>
+                <div>
+                    <form action="/client-entered" method="post" class="clientForm">
+
+                        <h1 class="clientLegend">Please Enter a New Client</h1>
+                        <div class="row">
+                            <div class="col-sm">
+                                <label for="clientType">Type:</label>
+                                <select name="type" id="clientType">
+                                    <option value="">--Please choose an option--</option>
+                                    <option value="inbound">Inbound</option>
+                                    <option value="outbound">Outbound</option>
+                                </select>
+
+                                <p>
+                                    <label class="labels" for="com_name">Company Name:</label>
+                                    <input class="form-rounded"type="text" name="com_name" id="com_name">
+                                </p>
+                                <p>
+                                    <label class="labels" for="fac_street">Facility Street:</label>
+                                    <input class="form-rounded"type="text" name="fac_street" id="fac_street">
+                                </p>
+                                <p>
+                                    <label class="labels" for="fac_city">Facilty City:</label>
+                                    <input class="form-rounded"type="text" name="fac_city" id="fac_city">
+                                </p>
+                                <p>
+                                    <label class="labels" for="fac_state">Facility State:</label>
+                                    <input class="form-rounded"type="text" name="fac_state" id="fac_state">
+                                </p>
+                                <p>
+                                    <label class="labels" for="fac_zip">Facility Zip Code:</label>
+                                    <input class="form-rounded"type="text" name="fac_zip" id="fac_zip">
+                                </p>
+                                <p>
+                                    <label class="labels" for="fac_phone">Facility Phone:</label>
+                                    <input class="form-rounded"type="text" name="fac_phone" id="fac_phone">
+                                </p>
+                            </div>
+                            <div class="col-sm">
+                                <p>
+                                    <label class="labels" for="con_fname">Contact First Name:</label>
+                                    <input class="form-rounded"type="text" name="con_fname" id="con_fname">
+                                </p>
+                                <p>
+                                    <label class="labels" for="con_lname">Contact Last Name:</label>
+                                    <input class="form-rounded"type="text" name="con_lname" id="con_lname">
+                                </p>
+                                <p>
+                                    <label class="labels" for="con_email">Contact Email:</label>
+                                    <input class="form-rounded"type="text" name="con_email" id="con_email">
+                                </p>
+                                <p>
+                                    <label class="labels" for="con_phone">Contact Phone:</label>
+                                    <input class="form-rounded"type="text" name="con_phone" id="con_phone">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="text-center clientButton"><button type="submit">Submit</button></div>
+                    </form>
+                </div>
+
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; TitanSaaS 2020</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
 <%- include('includes/footer.ejs') %>

@@ -1,89 +1,192 @@
 <%- include('includes/header.ejs') %>
 
-<form action="/products-entered" method="post">
-    <h1 class="clientLegend">Please Enter a Product</h1>
-    <div class="row">
-        <div class="col-sm">
-            <label for="pet-select">Type:</label>
-            <select name="pets" id="pet-select">
-                <option value="">--Please choose an option--</option>
-                <option value="Desktop">Desktop</option>
-                <option value="Laptop">Laptop</option>
-                <option value="Monitor">Monitor</option>
-                <option value="Hard Drive">Hard Drive</option>
-                <option value="Other">Other</option>
-            </select>
+<!-- Page Wrapper -->
+<div id="wrapper">
 
-            <p>
-                <label class="labels" for="manufacturer">Manufacturer:</label><br>
-                <input class="form-rounded" type="text" name="manufacturer" id="manufacturer">
-            </p>
-            <p>
-                <label class="labels" for="model">Model:</label><br>
-                <input class="form-rounded" type="text" name="model" id="model">
-            </p>
-            <p>
-                <label class="labels" for="serial">Serial #:</label><br>
-                <input class="form-rounded" type="text" name="serial" id="serial">
-            </p>
-            <p>
-                <label class="labels" for="size">Size:</label><br>
-                <input class="form-rounded" type="text" name="size" id="size">
-            </p>
-            <p>
-                <label class="labels" for="proc_model">Processor Model:</label><br>
-                <input class="form-rounded" type="text" name="proc_model" id="proc_model">
-            </p>
-            <p>
-                <label class="labels" for="proc_speed">Processor Speed:</label><br>
-                <input class="form-rounded" type="text" name="proc_speed" id="proc_speed">
-            </p>
-            <p>
-                <label class="labels" for="ram">RAM:</label><br>
-                <input class="form-rounded" type="text" name="ram" id="ram">
-            </p>
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+            <a class="nav-link" href="/">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>TitanSaaS</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Forms
         </div>
-        <div class="col-sm">
-            <p>
-                <label class="labels" for="hdd">Hard Drive:</label><br>
-                <input class="form-rounded" type="text" name="hdd" id="hdd">
-            </p>
-            <p>
-                <label class="labels" for="hdd_type">Hard Drive Type:</label><br>
-                <input class="form-rounded" type="text" name="hdd_type" id="hdd_type">
-            </p>
-            <p>
-                <label class="labels" for="optical">Optical:</label><br>
-                <input class="form-rounded" type="text" name="optical" id="optical">
-            </p>
-            <p>
-                <label class="labels" for="coa">COA:</label><br>
-                <input class="form-rounded" type="text" name="coa" id="coa">
-            </p>
-            <p>
-                <label class="labels" for="battery">Battery:</label><br>
-                <input class="form-rounded" type="text" name="battery" id="battery">
-            </p>
-            <p>
-                <label class="labels" for="webcam">Webcam:</label><br>
-                <input class="form-rounded" type="text" name="webcam" id="webcam">
-            </p>
-            <p>
-                <label class="labels" for="short_description">Product Description:</label><br>
-                <input class="form-rounded" type="text" name="short_description" id="short_description">
-            </p>
-            <p>
-                <label class="labels" for="comment">Comments:</label><br>
-                <input class="form-rounded" type="text" name="comment" id="comment">
-            </p>
-            <p>
-                <label class="labels" for="grade">Grade:</label><br>
-                <input class="form-rounded" type="text" name="grade" id="grade">
-            </p>
-            <button class="" type="submit">Submit</button>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link" href="/">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Home</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/pricing">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Pricing</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/products">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Product Entry</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/client-entry">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>New Clients</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/client">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Client Dashboard</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Addons Coming Soon
         </div>
+
+        <!-- Divider -->
+        <!--        <hr class="sidebar-divider d-none d-md-block">-->
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">Welcome to TitanSaaS</h1>
+
+                </div>
+                <div>
+                    <form action="/products-entered" method="post">
+                        <h1 class="clientLegend">Please Enter a Product</h1>
+                        <div class="row">
+                            <div class="col-sm">
+                                <label for="pet-select">Type:</label>
+                                <select name="pets" id="pet-select">
+                                    <option value="">--Please choose an option--</option>
+                                    <option value="Desktop">Desktop</option>
+                                    <option value="Laptop">Laptop</option>
+                                    <option value="Monitor">Monitor</option>
+                                    <option value="Hard Drive">Hard Drive</option>
+                                    <option value="Other">Other</option>
+                                </select>
+
+                                <p>
+                                    <label class="labels" for="manufacturer">Manufacturer:</label><br>
+                                    <input class="form-rounded" type="text" name="manufacturer" id="manufacturer">
+                                </p>
+                                <p>
+                                    <label class="labels" for="model">Model:</label><br>
+                                    <input class="form-rounded" type="text" name="model" id="model">
+                                </p>
+                                <p>
+                                    <label class="labels" for="serial">Serial #:</label><br>
+                                    <input class="form-rounded" type="text" name="serial" id="serial">
+                                </p>
+                                <p>
+                                    <label class="labels" for="size">Size:</label><br>
+                                    <input class="form-rounded" type="text" name="size" id="size">
+                                </p>
+                                <p>
+                                    <label class="labels" for="proc_model">Processor Model:</label><br>
+                                    <input class="form-rounded" type="text" name="proc_model" id="proc_model">
+                                </p>
+                                <p>
+                                    <label class="labels" for="proc_speed">Processor Speed:</label><br>
+                                    <input class="form-rounded" type="text" name="proc_speed" id="proc_speed">
+                                </p>
+                                <p>
+                                    <label class="labels" for="ram">RAM:</label><br>
+                                    <input class="form-rounded" type="text" name="ram" id="ram">
+                                </p>
+                            </div>
+                            <div class="col-sm">
+                                <p>
+                                    <label class="labels" for="hdd">Hard Drive:</label><br>
+                                    <input class="form-rounded" type="text" name="hdd" id="hdd">
+                                </p>
+                                <p>
+                                    <label class="labels" for="hdd_type">Hard Drive Type:</label><br>
+                                    <input class="form-rounded" type="text" name="hdd_type" id="hdd_type">
+                                </p>
+                                <p>
+                                    <label class="labels" for="optical">Optical:</label><br>
+                                    <input class="form-rounded" type="text" name="optical" id="optical">
+                                </p>
+                                <p>
+                                    <label class="labels" for="coa">COA:</label><br>
+                                    <input class="form-rounded" type="text" name="coa" id="coa">
+                                </p>
+                                <p>
+                                    <label class="labels" for="battery">Battery:</label><br>
+                                    <input class="form-rounded" type="text" name="battery" id="battery">
+                                </p>
+                                <p>
+                                    <label class="labels" for="webcam">Webcam:</label><br>
+                                    <input class="form-rounded" type="text" name="webcam" id="webcam">
+                                </p>
+                                <p>
+                                    <label class="labels" for="short_description">Product Description:</label><br>
+                                    <input class="form-rounded" type="text" name="short_description" id="short_description">
+                                </p>
+                                <p>
+                                    <label class="labels" for="comment">Comments:</label><br>
+                                    <input class="form-rounded" type="text" name="comment" id="comment">
+                                </p>
+                                <p>
+                                    <label class="labels" for="grade">Grade:</label><br>
+                                    <input class="form-rounded" type="text" name="grade" id="grade">
+                                </p>
+                                <button class="" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+                </div>
+
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; TitanSaaS 2020</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
     </div>
-</form>
+    <!-- End of Content Wrapper -->
+
 </div>
-</div>
+<!-- End of Page Wrapper -->
+
 <%- include('includes/footer.ejs') %>
